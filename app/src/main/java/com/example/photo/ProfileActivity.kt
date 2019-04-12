@@ -35,6 +35,8 @@ class ProfileActivity : AppCompatActivity()  {
         val fragmentAdapter =
             SampleFragmentPagerAdapter(supportFragmentManager)
 
+        Log.d("WUW", ""+fragmentAdapter)
+
         viewpager.adapter = fragmentAdapter
 
         tabs_main.setupWithViewPager(viewpager)

@@ -29,7 +29,7 @@
 
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                       android:text="Have a nice day!"
-                      android:textSize="60dp"/>
+                      android:textSize="60sp"/>
 
 
 
@@ -54,6 +54,15 @@
     </android.support.design.widget.AppBarLayout>
 
     <!-- -->
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/but_add_photo"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_add_a_photo_12dp"/>
 
 </android.support.design.widget.CoordinatorLayout>
 
