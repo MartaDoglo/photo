@@ -3,12 +3,12 @@ package com.example.photo
 import android.os.Parcel
 import android.os.Parcelable
 
-class Photo (val name : String, val photo : Int) : Parcelable{
+class Photo (val id : Int, val name : String, val photo : Int) : Parcelable{
     constructor(parcel: Parcel) : this(
+        parcel.readInt(),
         parcel.readString(),
         parcel.readInt()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)

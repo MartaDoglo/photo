@@ -17,7 +17,7 @@ open class SampleFragmentPagerAdapter (fm : FragmentManager) : FragmentPagerAdap
     override fun getItem(p0: Int): Fragment {
         return when (p0) {
             0 -> {
-                TempFragment()
+                PhotosFragment()
             }
             1 -> TempFragment()
             else -> {
