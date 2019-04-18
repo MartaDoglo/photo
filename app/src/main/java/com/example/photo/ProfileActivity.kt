@@ -30,10 +30,10 @@ class ProfileActivity : AppCompatActivity()  {
         getSupportActionBar()!!.setElevation(0.0f)
 
 
-
-
         val fragmentAdapter =
             SampleFragmentPagerAdapter(supportFragmentManager)
+
+        Log.d("WUW", ""+fragmentAdapter)
 
         viewpager.adapter = fragmentAdapter
 

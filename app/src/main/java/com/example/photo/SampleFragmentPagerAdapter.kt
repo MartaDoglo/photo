@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
-open class SampleFragmentPagerAdapter (val fm : FragmentManager) : FragmentPagerAdapter(fm) {
+open class SampleFragmentPagerAdapter (fm : FragmentManager) : FragmentPagerAdapter(fm) {
 
     val tabTitles = arrayOf<String>("Tab1", "Tab2", "Tab3")
 
@@ -13,17 +13,18 @@ open class SampleFragmentPagerAdapter (val fm : FragmentManager) : FragmentPager
         const val PAGE_COUNT = 3
     }
 
+
     override fun getItem(p0: Int): Fragment {
-//        return when (p0) {
-//            0 -> {
-//                FirstFragment()
-//            }
-//            1 -> SecondFragment()
-//            else -> {
+        return when (p0) {
+            0 -> {
+                PhotosFragment()
+            }
+            1 -> TempFragment()
+            else -> {
 
                 return PhotosFragment()
-//            }
-//        }
+            }
+        }
     }
 
     override fun getCount(): Int {
