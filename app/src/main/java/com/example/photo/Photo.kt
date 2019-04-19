@@ -7,8 +7,7 @@ class Photo (val name : String, val photo : Int) : Parcelable{
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readInt()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)
