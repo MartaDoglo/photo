@@ -1,6 +1,7 @@
 package com.example.photo
 
 import android.content.Context
+import io.realm.Realm
 
 class UserDBProvider {
 
@@ -18,5 +19,12 @@ class UserDBProvider {
         )
     }
 
-    fun GetAllUsers() = userList
+    fun GetAllUsers() : MutableList<User>{
+        Realm.getDefaultInstance().use { realm ->
+            val result = realm
+                .where(UserRealm::class.java)
+                .findAll()
+        }
+        return
+    }
 }
